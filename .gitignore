@@ -1,4 +1,4 @@
-/*.suo
-/Croudia/*.user
-/Croudia/obj
-/Croudia/bin
+*.suo
+*.user
+bin
+obj
