@@ -8,9 +8,5 @@ namespace Croudia.Utility
 {
     public static class WebUtility
     {
-        /*public static byte[] DownloadData(this WebResponse response)
-        {
-
-        }*/
     }
 }

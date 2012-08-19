@@ -30,6 +30,8 @@ namespace Croudia
                 throw new Exception("Credential must be set");
             }
 
+            var applyRet = method.ApplyBeforeRequest(this.Credential);
+
             HttpWebRequest req;
             var enc = Encoding.UTF8;
             if (method.MethodType == HttpMethodType.Get)
@@ -51,6 +53,7 @@ namespace Croudia
             {
                 throw new NotImplementedException("Not excepted HTTP method.");
             }
+            req.Headers.Add(applyRet);
             req.CookieContainer = this.Credential.CookieContainer;
             req.AllowAutoRedirect = false;
             var resp = (HttpWebResponse)req.GetResponse();

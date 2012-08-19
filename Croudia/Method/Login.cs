@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.Xml.Linq;
+using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace Croudia.Method
 {
@@ -37,6 +39,11 @@ namespace Croudia.Method
             {
                 return false;
             }
+        }
+
+        public NameValueCollection ApplyBeforeRequest(Credential credential)
+        {
+            return new NameValueCollection();
         }
     }
 }
